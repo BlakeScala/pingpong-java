@@ -26,8 +26,8 @@ public class App {
       Integer inputInteger = Integer.parseInt(input);
       model.put("number-input", inputInteger);
       PingPong pingPong = new PingPong();
-      List<Object> result = pingPong.runPingPong(inputInteger);
-      model.put("result", result);
+      ArrayList<Object> results = pingPong.runPingPong(inputInteger);
+      model.put("results", results);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
